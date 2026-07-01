@@ -2,6 +2,7 @@
 import sys
 import ctypes
 import atexit
+import os
 
 def _init_system_wide_mutex():
     kernel32 = ctypes.windll.kernel32
@@ -30,54 +31,14 @@ def _init_system_wide_mutex():
         
     atexit.register(lambda: kernel32.CloseHandle(mutex_handle) if mutex_handle else None)
 
-import os
 _init_system_wide_mutex()
 # ======================================================================
 
 import socket
 import threading
 import customtkinter as ctk
-import sys
 import webbrowser
-import ctypes
 import atexit
-from ctypes import wintypes
-
-# --- Блокировка единственного экземпляра ---
-ERROR_ALREADY_EXISTS = 183
-
-kernel32 = ctypes.windll.kernel32
-CreateMutexW = kernel32.CreateMutexW
-CreateMutexW.argtypes = [wintypes.LPVOID, wintypes.BOOL, wintypes.LPCWSTR]
-CreateMutexW.restype = wintypes.HANDLE
-
-CloseHandle = kernel32.CloseHandle
-CloseHandle.argtypes = [wintypes.HANDLE]
-CloseHandle.restype = wintypes.BOOL
-
-GetLastError = kernel32.GetLastError
-GetLastError.argtypes = []
-GetLastError.restype = wintypes.DWORD
-
-_mutex_handle = None
-
-def already_running():
-    global _mutex_handle
-    _mutex_handle = CreateMutexW(None, False, "LanCheck_SingleInstance_Mutex")
-    if GetLastError() == ERROR_ALREADY_EXISTS:
-        return True
-    return False
-
-def cleanup_mutex():
-    global _mutex_handle
-    if _mutex_handle:
-        CloseHandle(_mutex_handle)
-        _mutex_handle = None
-
-if already_running():
-    sys.exit(0)
-
-atexit.register(cleanup_mutex)
 
 # --- Тексты локализации (те же, что и ранее) ---
 TEXTS = {
