@@ -38,7 +38,6 @@ import socket
 import threading
 import customtkinter as ctk
 import webbrowser
-import atexit
 
 # --- Тексты локализации (те же, что и ранее) ---
 TEXTS = {
