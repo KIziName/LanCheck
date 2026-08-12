@@ -1,10 +1,7 @@
-from config import init_system_wide_mutex
-# Инициализируем глобальный мьютекс перед запуском остального кода
-init_system_wide_mutex()
-
 import socket
 import threading
 import customtkinter as ctk
+
 from config import TEXTS
 from about_window import AboutWindow
 
@@ -25,7 +22,6 @@ class LanCheck(ctk.CTk):
         self.stop_scan = False
         self.about_window = None
 
-        # Верхняя панель
         self.top_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.top_frame.pack(fill="x", padx=15, pady=(15, 0))
         self.label_title = ctk.CTkLabel(
@@ -34,7 +30,6 @@ class LanCheck(ctk.CTk):
         )
         self.label_title.pack(side="left")
 
-        # Описание
         self.desc_label = ctk.CTkLabel(
             self,
             text=TEXTS[self.lang]["description"],
@@ -45,7 +40,6 @@ class LanCheck(ctk.CTk):
         )
         self.desc_label.pack(pady=(15, 10))
 
-        # Статический IP
         self.ip_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.ip_frame.pack(pady=10)
         self.ip_label = ctk.CTkLabel(
@@ -54,7 +48,6 @@ class LanCheck(ctk.CTk):
         )
         self.ip_label.pack()
 
-        # Кнопки управления
         self.button_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.button_frame.pack(pady=10)
 
@@ -78,16 +71,13 @@ class LanCheck(ctk.CTk):
         )
         self.btn_stop.pack(side="left", padx=5)
 
-        # Прогресс-бар
         self.progress = ctk.CTkProgressBar(self, width=440)
         self.progress.set(0)
 
-        # Текстовое поле результатов
         self.result_text = ctk.CTkTextbox(self, width=440, height=280, font=("Segoe UI", 13))
         self.result_text.pack(pady=15)
         self.result_text.configure(state="disabled")
 
-        # Нижняя панель
         self.bottom_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.bottom_frame.pack(fill="x", padx=15, pady=(0, 10))
 
