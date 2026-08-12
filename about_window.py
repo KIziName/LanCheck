@@ -1,5 +1,6 @@
 import customtkinter as ctk
 import webbrowser
+
 from config import TEXTS
 
 class AboutWindow(ctk.CTkToplevel):
@@ -16,7 +17,6 @@ class AboutWindow(ctk.CTkToplevel):
         self.center_on_parent()
 
     def center_on_parent(self):
-        """Центрирует окно относительно родительского."""
         self.update_idletasks()
         parent = self.master
         parent_x = parent.winfo_x()
