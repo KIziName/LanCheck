@@ -1,28 +1,41 @@
-🔍 LanCheck
-------------------------------------------
-​Простая утилита для сканирования открытых портов на локальном компьютере (127.0.0.1). Она помогает быстро выявить потенциально опасные открытые порты и принять меры.
+## 🔍 LanCheck
 
-​🚀 Особенности
-------------------------------------------
-​⚡ Простота: Интуитивно понятный интерфейс--запустите сканирование, дождитесь результатов и прочитайте рекомендации.
+A simple GUI utility for scanning open network ports on your local computer (127.0.0.1). It helps you quickly identify potentially dangerous open ports and take action to improve security.
 
-​🔒 Безопасность: Программа полностью безопасна и не требует прав администратора.
+---
 
-​🌐 Мультиязычность: Интерфейс приложения доступен на двух языках.
+## 📋 Features
 
-​💡 Важно помнить: Открытые порты 135 и 445 являются штатными для Windows. Обнаружение остальных портов — повод задуматься о настройке брандмауэра.
+· Intuitive interface – start scanning with a single click.
+· Multi‑language – supports Russian and English.
+· Progress indication – visual progress bar and detailed result log.
+· System port highlighting – ports 135 and 445 are marked as standard Windows ports (safe).
 
+---
 
-​🔍 LanCheck
-------------------------------------------
-​A simple utility for scanning open ports on your local computer (127.0.0.1). It helps quickly identify potentially dangerous open ports and take action.
+## ⚙️ Requirements
 
-​🚀 Features
-------------------------------------------
-​⚡ Simple Use: Intuitive interface — run the scan, wait for the results, and read the recommendations.
+· ***Python 3.7*** or higher
+· `pip install customtkinter`
 
-​🔒 Safe & Secure: The program is completely safe and does not require administrator rights.
+---
 
-​🌐 Multi-language: The application interface is available in two languages.
+##🔍 LanCheck
 
-​💡 Keep in mind: Open ports 135 and 445 are standard for Windows. Finding others is a reason to think about configuring your firewall.
+Простая утилита с графическим интерфейсом для сканирования открытых сетевых портов на локальном компьютере (127.0.0.1). Помогает быстро выявить потенциально опасные открытые порты и принять меры по усилению безопасности.
+
+---
+
+## 📋 Возможности
+
+· Интуитивно понятный интерфейс – запустите сканирование одной кнопкой.
+· Мультиязычность – поддерживаются русский и английский языки.
+· Индикация прогресса – визуальный прогресс-бар и лог результатов.
+· Выделение системных портов – порты 135 и 445 помечаются как штатные для Windows.
+
+---
+
+⚙️ Требования
+
+· ***Python 3.7*** или выше
+· `pip install customtkinter`
