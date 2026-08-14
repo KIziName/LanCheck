@@ -21,7 +21,7 @@ A simple GUI utility for scanning open network ports on your local computer (127
 
 ---
 
-##🔍 LanCheck
+## 🔍 LanCheck
 
 Простая утилита с графическим интерфейсом для сканирования открытых сетевых портов на локальном компьютере (127.0.0.1). Помогает быстро выявить потенциально опасные открытые порты и принять меры по усилению безопасности.
 
@@ -36,7 +36,7 @@ A simple GUI utility for scanning open network ports on your local computer (127
 
 ---
 
-⚙️ Требования
+## ⚙️ Требования
 
 · ***Python 3.8*** или выше
 
