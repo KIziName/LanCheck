@@ -15,7 +15,7 @@ A simple GUI utility for scanning open network ports on your local computer (127
 
 ## ⚙️ Requirements
 
-· ***Python 3.7*** or higher
+· ***Python 3.8*** or higher
 
 · `pip install customtkinter`
 
@@ -38,6 +38,6 @@ A simple GUI utility for scanning open network ports on your local computer (127
 
 ⚙️ Требования
 
-· ***Python 3.7*** или выше
+· ***Python 3.8*** или выше
 
 · `pip install customtkinter`
