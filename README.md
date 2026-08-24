@@ -7,8 +7,11 @@ A simple GUI utility for scanning open network ports on your local computer (127
 ## 📋 Features
 
 · Intuitive interface – start scanning with a single click.
+
 · Multi‑language – supports Russian and English.
+
 · Progress indication – visual progress bar and detailed result log.
+
 · System port highlighting – ports 135 and 445 are marked as standard Windows ports (safe).
 
 ---
@@ -30,8 +33,11 @@ A simple GUI utility for scanning open network ports on your local computer (127
 ## 📋 Возможности
 
 · Интуитивно понятный интерфейс – запустите сканирование одной кнопкой.
+
 · Мультиязычность – поддерживаются русский и английский языки.
+
 · Индикация прогресса – визуальный прогресс-бар и лог результатов.
+
 · Выделение системных портов – порты 135 и 445 помечаются как штатные для Windows.
 
 ---
