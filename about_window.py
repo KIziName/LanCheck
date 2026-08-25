@@ -3,7 +3,6 @@ import webbrowser
 
 from config import TEXTS, SETTINGS
 
-
 class AboutWindow(ctk.CTkToplevel):
     def __init__(self, parent, lang, github_url):
         super().__init__(parent)
