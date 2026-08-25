@@ -5,7 +5,6 @@ import customtkinter as ctk
 from config import TEXTS, SETTINGS
 from about_window import AboutWindow
 
-
 class LanCheck(ctk.CTk):
     def __init__(self):
         super().__init__()
