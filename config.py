@@ -1,34 +1,6 @@
 TEXTS = {
-    "ru": {
-        "app_title": "LanCheck V1.0",
-        "about_btn": "О программе",
-        "start_btn": "Запустить проверку",
-        "stop_btn": "Остановить",
-        "start_btn_scanning": "Сканирование...",
-        "lang_label": "Язык:",
-        "lang_en": "EN",
-        "lang_ru": "RU",
-        "description": "Сканирует компьютер на наличие открытых сетевых портов и предупреждает о потенциальных уязвимостях.",
-        "about_title": "О программе",
-        "about_author": "Автор: KiziName",
-        "about_version": "Версия: V1.0",
-        "about_desc": "Простой инструмент для сканирования открытых портов и выявления потенциальных уязвимостей в локальной сети.",
-        "about_github_text": "GitHub: KIziName/LanCheck",
-        "about_close": "Закрыть",
-        "scan_start": "=== Проверка системы (127.0.0.1) ===",
-        "port_open_system": "🟢 Порт {}: Открыт (Системная служба Windows)",
-        "port_open_suspicious": "⚠️ Порт {}: ОТКРЫТ! Возможная уязвимость",
-        "port_closed": "⚪ Порт {}: Закрыт",
-        "port_error": "❌ Порт {}: Ошибка проверки - {}",
-        "result_title": "\n=== Итог проверки ===",
-        "result_safe": "✅ Всё в порядке. Компьютер защищен.",
-        "result_safe_note": "Открытые порты 135/445 нужны для работы Windows. Из интернета они заблокированы вашим роутером.",
-        "result_vulnerable": "🔍 Внимание! Найдено подозрительных портов: {}",
-        "scan_stopped": "⚠️ Сканирование прервано пользователем.",
-        "stopping": "Остановка...",
-    },
     "en": {
-        "app_title": "LanCheck V1.0",
+        "app_title": "LanCheck",
         "about_btn": "About",
         "start_btn": "Start Scan",
         "stop_btn": "Stop",
@@ -62,7 +34,7 @@ SETTINGS = {
     "target_ip": "127.0.0.1",
     "ports": [21, 22, 23, 25, 80, 135, 139, 443, 445, 3389, 8080],
     "system_ports": [135, 445],          # порты, считающиеся безопасными
-    "timeout": 0.4,                      # таймаут подключения (сек)
+    "timeout": 0.4,                      # таймаут подключения 
 
     # --- Окна ---
     "main_window_size": "500x700",
