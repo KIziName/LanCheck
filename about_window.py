@@ -111,11 +111,3 @@ class AboutWindow(ctk.CTkToplevel):
             command=self.destroy
         )
         self.close_button.grid(row=6, column=1, pady=about_cfg["close_button_pady"])
-
-    def update_language(self, new_lang):
-        if new_lang == self.lang:
-            return
-        self.lang = new_lang
-        self.card.destroy()
-        self.build_ui()
-        self.title(TEXTS[self.lang]["about_title"])
