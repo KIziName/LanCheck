@@ -3,6 +3,8 @@ import webbrowser
 
 from config import TEXTS, SETTINGS
 
+
+
 class AboutWindow(ctk.CTkToplevel):
     def __init__(self, parent, lang, github_url):
         super().__init__(parent)
@@ -17,6 +19,7 @@ class AboutWindow(ctk.CTkToplevel):
         self.grab_set()
         self.center_on_parent()
 
+    
     def center_on_parent(self):
         self.update_idletasks()
         parent = self.master
@@ -30,6 +33,7 @@ class AboutWindow(ctk.CTkToplevel):
         y = parent_y + (parent_h // 2) - (h // 2)
         self.geometry(f"+{x}+{y}")
 
+    
     def build_ui(self):
         t = TEXTS[self.lang]
         about_cfg = SETTINGS["about"]
