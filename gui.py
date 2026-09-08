@@ -5,6 +5,8 @@ import customtkinter as ctk
 from config import TEXTS, SETTINGS
 from about_window import AboutWindow
 
+
+
 class LanCheck(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -107,12 +109,14 @@ class LanCheck(ctk.CTk):
         self.lang_switch.pack(side="right")
         self.lang_switch.set("EN") 
 
+    
     def get_text(self, key, *args):
         text = TEXTS[self.lang].get(key, key)
         if args:
             text = text.format(*args)
         return text
 
+    
     def update_ui_texts(self):
         self.title(TEXTS[self.lang]["app_title"])
         self.btn_about.configure(text=TEXTS[self.lang]["about_btn"])
@@ -128,6 +132,7 @@ class LanCheck(ctk.CTk):
             self.result_text.delete("1.0", "end")
             self.result_text.configure(state="disabled")
 
+    
     def open_about_window(self):
         if self.about_window is None or not self.about_window.winfo_exists():
             self.about_window = AboutWindow(self, self.lang, self.github_url)
@@ -135,28 +140,34 @@ class LanCheck(ctk.CTk):
             self.about_window.focus()
             self.about_window.center_on_parent()
 
+    
     def log_message(self, message):
         self.result_text.configure(state="normal")
         self.result_text.insert("end", message + "\n")
         self.result_text.see("end")
         self.result_text.configure(state="disabled")
 
+    
     def update_progress(self, value):
         self.progress.set(value)
 
+    
     def show_progress_bar(self):
         if not self.progress.winfo_ismapped():
             self.progress.pack(pady=5, before=self.result_text)
 
+    
     def hide_progress_bar(self):
         if self.progress.winfo_ismapped():
             self.progress.pack_forget()
 
+    
     def clear_result_text(self):
         self.result_text.configure(state="normal")
         self.result_text.delete("1.0", "end")
         self.result_text.configure(state="disabled")
 
+    
     def set_controls_state(self, scanning):
         if scanning:
             self.btn_start.configure(state="disabled", text=self.get_text("start_btn_scanning"))
@@ -167,11 +178,13 @@ class LanCheck(ctk.CTk):
             self.btn_stop.configure(state="disabled", fg_color="gray")
             self.lang_switch.configure(state="normal")
 
+    
     def stop_scanning(self):
         if self.is_scanning:
             self.stop_scan = True
             self.log_message(self.get_text("stopping"))
 
+    
     def change_language(self, choice):
         if self.is_scanning:
             self.lang_switch.set("EN")
@@ -182,6 +195,7 @@ class LanCheck(ctk.CTk):
         self.lang = new_lang
         self.update_ui_texts()
 
+    
     def start_scan_thread(self):
         if self.is_scanning:
             return
@@ -195,6 +209,7 @@ class LanCheck(ctk.CTk):
 
         threading.Thread(target=self.scan_ports, daemon=True).start()
 
+    
     def scan_ports(self):
         target_ip = SETTINGS["target_ip"]
         ports = SETTINGS["ports"]
@@ -240,6 +255,7 @@ class LanCheck(ctk.CTk):
 
         self.after(0, self.finish_ui)
 
+    
     def finish_ui(self):
         self.hide_progress_bar()
         self.set_controls_state(False)
